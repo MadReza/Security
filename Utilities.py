@@ -55,6 +55,7 @@ def Miller(value, iteration):
 
 def generate_prime(k):
     """generate a number of k bits"""
+    #x = math.pow(2,k) #Can't store :(
     x = k
     x = x + random.randint(1, 1000)
 
@@ -78,3 +79,10 @@ def modinv(a, m):
         raise Exception('modular inverse does not exist')
     else:
         return x % m
+
+def coprime(a,b):
+    while b:
+        a, b = b, a%b
+    return a == 1
+
+print coprime(1543, 16963)
