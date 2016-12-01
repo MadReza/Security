@@ -2,7 +2,8 @@ import random
 import math
 
 def Miller(value, iteration):
-    """Determins if the value is prime probably"""
+    """Determins if the value is prime probably using the Rabin-Miller test"""
+    """https://www.topcoder.com/community/data-science/data-science-tutorials/primality-testing-non-deterministic-algorithms/"""
     if value < 2:
         return False
 
@@ -28,8 +29,3 @@ def Miller(value, iteration):
 
         iteration = iteration -1
     return True
-
-
-for x in range(3, 50):
-    print x, Miller(x, 5)
-
